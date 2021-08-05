@@ -60,7 +60,7 @@ public class OrderService {
 		for (int i = 0; i < orders.size(); i++) {
 			Order o = orders.get(i);
 			if (o.getId() == id) {
-				User user = restTemplate.getForObject("https://heroku-boot22.herokuapp.com/users/" + o.getId(), User.class);
+				User user = restTemplate.getForObject("http://test-user-dhruvco2611-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com/users/" + o.getId(), User.class);
 				res.addOrder(o);
 				res.setName(user.getName());
 			}
